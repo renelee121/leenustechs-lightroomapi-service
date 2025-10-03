@@ -6,7 +6,7 @@ metadata:
   labels:
     app: leenustechs-lightroomapi-service
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: leenustechs-lightroomapi-service
@@ -22,11 +22,11 @@ spec:
             - containerPort: 8082
           resources:
             limits:
-              memory: "1024Mi"
-              cpu: "1000m"
-            requests:
               memory: "512Mi"
               cpu: "500m"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
           readinessProbe:
             httpGet:
               path: /lightroomapi/v1/actuator/health
