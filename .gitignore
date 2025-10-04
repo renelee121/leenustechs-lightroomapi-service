@@ -1,0 +1,9 @@
+# Ignora todo
+*
+
+# Excepto esta carpeta
+!.k8s/
+!.k8s/**
+
+# (Opcional) si quieres permitir también el .gitignore mismo
+!.gitignore
