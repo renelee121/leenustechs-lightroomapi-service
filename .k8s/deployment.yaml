@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: lightroomapi
-          image:  hostinger.leenustechs.com.mx:5000/leenustechs-lightroomapi-service:bfc8096f8a8881dff0f000722c21738b33a55ae8
+          image:  hostinger.leenustechs.com.mx:5000/leenustechs-lightroomapi-service:398d4c856dd970664a555a8380a319bcdca775e8
           ports:
             - containerPort: 8085
           resources:
