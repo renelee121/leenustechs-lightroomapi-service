@@ -20,7 +20,7 @@ public class IOTRoomApiApplicationRestController {
     @Autowired
     private OperationTypeService operationTypeService;
 
-    @PostMapping("/event/{type}")
+    @PostMapping("/event")
     public Mono<GenericEventObjectResponse> handleEvent(@RequestBody GenericEventObjectRequest request) {
         GenericEventObjectDto event = new GenericEventObjectDto(request);
         
