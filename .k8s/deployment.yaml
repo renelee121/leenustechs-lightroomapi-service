@@ -19,7 +19,7 @@ spec:
         - name: lightroomapi
           image:  hostinger.leenustechs.com.mx:5000/leenustechs-lightroomapi-service:4e6b8d1eab67372dea4c51d35ffa627653564422
           ports:
-            - containerPort: 8082
+            - containerPort: 8085
           resources:
             limits:
               memory: "512Mi"
@@ -30,12 +30,12 @@ spec:
           readinessProbe:
             httpGet:
               path: /lightroomapi/v1/actuator/health
-              port: 8082
+              port: 8085
             initialDelaySeconds: 10
             periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /lightroomapi/v1/actuator/health
-              port: 8082
+              port: 8085
             initialDelaySeconds: 30
             periodSeconds: 30
